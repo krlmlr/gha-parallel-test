@@ -22,6 +22,8 @@ jobs:
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
+    max-parallel: 1
+
     strategy:
       fail-fast: false
       matrix:
@@ -35,5 +37,5 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           date
-          sleep 30
+          sleep 300
           date
